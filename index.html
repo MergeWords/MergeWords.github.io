@@ -224,6 +224,8 @@ Error message and password prompt
 
 <li>$:/state/toc/Contents/SQL-T-SQL-1637712383</li>
 
+<li>$:/state/toc/Contents/SQL/T-SQL-Metadata-1637712383</li>
+
 <li>$:/status/RequireReloadDueToPluginChange</li>
 
 <li>$:/StoryList</li>
@@ -239,6 +241,8 @@ Error message and password prompt
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>1. Server Information</li>
 
 <li>Contents</li>
 
@@ -10459,10 +10463,13 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 <div created="20210414124603652" modified="20210414124603652" title="$:/state/toc/Contents/SQL-T-SQL-1637712383">
 <pre>open</pre>
 </div>
+<div created="20210414124714112" modified="20210414124714112" title="$:/state/toc/Contents/SQL/T-SQL-Metadata-1637712383">
+<pre>open</pre>
+</div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210414124120965" list="Server Contents GettingStarted" modified="20210414124455550" title="$:/StoryList">
+<div created="20210414124120965" list="[[1. Server Information]] Contents GettingStarted" modified="20210414124455550" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180329154930300" creator="jd" modified="20180329155130924" modifier="jd" title="$:/theme">
@@ -10816,6 +10823,21 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
         }
     }
 }</pre>
+</div>
+<div created="20210414124717473" modified="20210414124747650" tags="Server" title="1. Server Information">
+<pre>```SQL
+--Server and instance name
+Select @@SERVERNAME as [Server\Instance];
+
+-- SQL Server Version
+Select @@VERSION as SQLServerVersion;
+
+-- SQL Server Instance
+Select @@ServiceName AS ServiceInstance;
+ 
+-- Current Database
+Select DB_NAME() AS CurrentDB_Name;
+```</pre>
 </div>
 <div created="20210414124205405" list-before="$:/core/ui/SideBar/Open" modified="20210414124257816" tags="$:/tags/SideBar" title="Contents">
 <pre>''Wiki''
